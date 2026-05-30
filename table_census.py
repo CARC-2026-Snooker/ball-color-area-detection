@@ -17,8 +17,8 @@ def count_balls_on_field(image_path):
     lower_red2 = np.array([165, 60, 20])
     upper_red2 = np.array([180, 255, 255])
     
-    lower_blue = np.array([85, 60, 20])
-    upper_blue = np.array([135, 255, 255])
+    lower_blue = np.array([60, 40, 20])
+    upper_blue = np.array([150, 255, 255])
 
     # 3. Create Global Masks
     mask_red = cv2.bitwise_or(cv2.inRange(hsv, lower_red1, upper_red1), 
@@ -83,4 +83,4 @@ def count_balls_on_field(image_path):
 
 # Run the test
 if __name__ == "__main__":
-    count_balls_on_field("images/test4_cropped.png")
+    count_balls_on_field("camera_images\img_21.jpg")
